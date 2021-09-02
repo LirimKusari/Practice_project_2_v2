@@ -20,13 +20,13 @@ const InputWrapper = styled.div`
   }
 `;
 
-const Input = ({ label, input }) => {
+const Input = React.forwardRef(({ label, input }, ref) => {
   return (
     <InputWrapper>
       <label htmlFor={input.id}>{label}</label>
-      <input {...input} />
+      <input ref={ref} {...input} />
     </InputWrapper>
   );
-};
+});
 
 export default Input;
