@@ -1,17 +1,7 @@
-import styled from "styled-components";
+import classes from './Card.module.css';
 
-const CardWrapper = styled.div`
-  /* max-width: 55rem; */
-  height: 100%;
-
-  border-radius: 15px;
-
-  color: white;
-`;
-
-const Card = (props) => {
-  const Classes = "card " + props.className;
-  return <CardWrapper className={Classes}>{props.children}</CardWrapper>;
+const Card = props => {
+  return <div className={classes.card}>{props.children}</div>
 };
 
 export default Card;
